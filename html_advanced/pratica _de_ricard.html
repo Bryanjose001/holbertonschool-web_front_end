@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Japanese Dragon Animation</title>
+  <style>
+    :root {
+      --bg-color: #f3f3f3;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      background: var(--bg-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .dragon {
+      width: 400px;
+      height: auto;
+      animation: drift 5s ease-in-out infinite alternate;
+      transform-origin: center;
+    }
+
+    @keyframes drift {
+      0%   { transform: translateX(-30px) rotate(1deg) scale(1); }
+      50%  { transform: translateX(0) rotate(0deg) scale(1.01); }
+      100% { transform: translateX(30px) rotate(-1deg) scale(1); }
+    }
+  </style>
+
+  <!-- Favicon (optional, for browser tab) -->
+  <link rel="icon" type="image/png" href="./Japanese_dragon.png">
+</head>
+<body>
+  <img src="./Japanese_dragon.png" alt="Japanese Dragon" class="dragon" />
+</body>
+</html>
